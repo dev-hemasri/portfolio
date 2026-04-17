@@ -1,0 +1,166 @@
+.hero {
+  min-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 5rem 1.5rem 3rem;
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(79,70,229,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(124,58,237,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(8,145,178,0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.gradient-text {
+  background: var(--gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(79,70,229,0.1);
+  border: 1px solid rgba(79,70,229,0.2);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.6s ease;
+  font-weight: 600;
+}
+.hero-badge__dot {
+  width: 8px;
+  height: 8px;
+  background: var(--success);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  display: inline-block;
+}
+.hero-text h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  animation: fadeInUp 0.6s ease 0.1s both;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+  animation: fadeInUp 0.6s ease 0.2s both;
+  line-height: 1.7;
+}
+.hero-stats {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  animation: fadeInUp 0.6s ease 0.3s both;
+  flex-wrap: wrap;
+}
+.stat { display: flex; flex-direction: column; position: relative; }
+.stat:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 1px;
+  background: var(--border-strong);
+}
+.stat-value {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+/* Code window */
+.hero-visual { animation: fadeInUp 0.6s ease 0.5s both; }
+.code-window {
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+.code-header {
+  background: var(--bg-tertiary);
+  padding: 0.75rem 1rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+.dot-red    { background: #ef4444; }
+.dot-yellow { background: #f59e0b; }
+.dot-green  { background: #10b981; }
+.code-filename {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-family: 'Fira Code', 'Consolas', monospace;
+}
+.code-content {
+  padding: 1.25rem;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.83rem;
+  line-height: 1.8;
+  background: #1e1e2e;
+  color: #cdd6f4;
+}
+.code-line { display: flex; gap: 1rem; }
+.line-number { color: #6c7086; user-select: none; min-width: 1.5rem; text-align: right; }
+.code-keyword  { color: #f38ba8; }
+.code-string   { color: #a6e3a1; }
+.code-function { color: #89b4fa; }
+.code-comment  { color: #6c7086; font-style: italic; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-content { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+}
+@media (max-width: 480px) {
+  .hero-stats { gap: 1.25rem; }
+  .stat:not(:last-child)::after { display: none; }
+}
