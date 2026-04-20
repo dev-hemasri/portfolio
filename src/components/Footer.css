@@ -15,7 +15,7 @@
 .footer-left .brand {
   font-size: 1.25rem;
   font-weight: 700;
-  background: var(--gradient-1);
+  background: var(--gradient-3);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
