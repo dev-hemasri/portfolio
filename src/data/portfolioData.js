@@ -5,75 +5,71 @@
 export const personal = {
   name: 'Hemasri',
   title: 'Senior Frontend Developer',
-  tagline: 'Angular Specialist · TypeScript · RxJS · React (Upskilling)',
   summary:
-    '6+ years building scalable Angular applications for government and enterprise clients. ' +
-    'Delivered portals serving 200+ daily users with 30% performance improvements. ' +
-    'Currently expanding into React and modern JavaScript ecosystem.',
+  'Frontend Developer with 6+ years of experience building scalable, high-performance web applications using Angular and modern JavaScript frameworks including React. ' +
+  'Delivered enterprise and government solutions serving 200+ daily users, achieving up to 30% performance improvements. ' +
+  'Strong in component architecture, API integration, and performance optimization, with a growing focus on React and modern frontend ecosystems.',
   email: 'srihemasurya@gmail.com',
   phone: '+91 9952688512',
   location: 'Salem, Tamil Nadu, India',
   linkedin: 'https://linkedin.com/in/hemasriofficial',
   github: 'https://github.com/dev-hemasri',
   portfolio: 'https://hemasri-dev.netlify.app',
-  resumeUrl: '#', // replace with actual resume PDF link
+  resumeUrl: '/hemasri_frontend.pdf',
 }
 
 export const stats = [
   { value: '6+', label: 'Years Experience' },
   { value: '10+', label: 'Projects Delivered' },
   { value: '200+', label: 'Daily Active Users' },
-  { value: '30%', label: 'Performance Gains' },
+  // { value: '30%', label: 'Performance Gains' },
 ]
 
 export const skills = [
   {
     category: 'Core Languages',
-    icon: '{ }',
     iconClass: 'devicon-javascript-plain colored',
-    items: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3', 'JSON'],
+    items: ['JavaScript (ES6+)', 'TypeScript', 'HTML5', 'CSS3'],
   },
   {
     category: 'Angular Ecosystem',
-    icon: 'A',
     iconClass: 'devicon-angularjs-plain colored',
-    items: ['Angular 14–17', 'Angular CLI', 'Angular Router', 'Angular Material', 'Reactive Forms', 'HTTP Interceptors', 'Dependency Injection', 'Angular Pipes', 'Feature Modules'],
+    items: ['Angular 2+', 'Angular CLI', 'Routing & Modules', 'Reactive Forms', 'Angular Material', 'HTTP Interceptors'],
   },
   {
     category: 'State & Async',
-    icon: '~',
     iconClass: 'devicon-rxjs-plain',
-    items: ['RxJS', 'NgRx', 'Observables', 'BehaviorSubject', 'Async Pipe', 'switchMap / catchError'],
+    items: ['RxJS', 'NgRx', 'Observables', 'BehaviorSubject', 'Async Pipe'],
   },
   {
     category: 'UI & Styling',
-    icon: '✦',
     iconClass: 'devicon-bootstrap-plain colored',
-    items: ['Bootstrap 5', 'Tailwind CSS', 'Angular Material', 'WCAG 2.1', 'Responsive Design', 'CSS Grid / Flexbox', 'jQuery'],
+    items: ['Bootstrap 5', 'Tailwind CSS', 'Responsive Design', 'CSS Grid / Flexbox', 'Accessibility (WCAG)'],
   },
   {
     category: 'API & Data',
-    icon: '⇄',
     iconClass: 'devicon-nodejs-plain colored',
-    items: ['RESTful APIs', 'HTTPClient', 'AJAX', 'JSON Parsing', 'GraphQL (basics)', 'Async/Await', 'Axios'],
+    items: ['REST APIs', 'HTTPClient', 'Async/Await', 'JSON Handling', 'GraphQL (Basics)'],
   },
   {
-    category: 'React (Upskilling)',
-    icon: '⚛',
+    category: 'Backend',
+    iconClass: 'devicon-php-plain colored',
+    items: ['PHP', 'MySQL'],
+  },
+  {
+    category: 'React',
     iconClass: 'devicon-react-original colored',
-    items: ['React 18', 'React Hooks', 'useState / useEffect', 'useContext', 'React Router v6', 'Component Architecture'],
+    items: ['React 18+', 'Hooks', 'Redux', 'Context API', 'React Router', 'Component Architecture'],
   },
   {
     category: 'Testing & QA',
-    icon: '✓',
     iconClass: 'devicon-jest-plain colored',
-    items: ['Jasmine', 'Karma', 'Postman', 'Chrome DevTools', 'Cross-Browser Testing', 'Jest (learning)', 'Cypress (learning)'],
+    items: ['Jasmine', 'Karma', 'Unit Testing', 'Postman', 'Chrome DevTools'],
   },
   {
-    category: 'DevOps & Tools',
-    icon: '⚙',
+    category: 'Tools & Workflow',
     iconClass: 'devicon-git-plain colored',
-    items: ['Git', 'GitHub', 'CI/CD Pipelines', 'Webpack', 'npm', 'Jira', 'VS Code', 'Agile / Scrum'],
+    items: ['Git', 'GitHub', 'CI/CD', 'Webpack', 'Jira', 'Agile/Scrum'],
   },
 ]
 
@@ -94,9 +90,9 @@ export const experience = [
   },
   {
     id: 2,
-    role: 'Senior Frontend Developer (Remote)',
+    role: 'Senior Frontend Developer',
     company: 'K Labs Technology & Solutions Pvt Ltd',
-    location: 'Chennai, India',
+    location: 'Remote, India',
     period: 'May 2023 – Dec 2025',
     type: 'full-time',
     achievements: [
@@ -111,7 +107,7 @@ export const experience = [
   {
     id: 3,
     role: 'Junior Frontend Developer',
-    company: 'Box of Tech (~20-person startup)',
+    company: 'Box of Tech ',
     location: 'Salem, India',
     period: 'Mar 2022 – Apr 2023',
     type: 'full-time',

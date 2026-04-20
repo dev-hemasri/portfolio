@@ -4,12 +4,18 @@ import './Contact.css'
 
 export default function Contact() {
   const [copied, setCopied] = useState(false)
+  const handleEmailClick = () => {
+  const subject = "Regarding Frontend Opportunity"
+  const body = `Hi Hemasri,
+          ,
+`
+  const mailtoLink = `mailto:${personal.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+  navigator.clipboard?.writeText(personal.email)
+  setCopied(true)
+  setTimeout(() => setCopied(false), 2000)
+  window.location.href = mailtoLink
 
-  const copyEmail = () => {
-    navigator.clipboard.writeText(personal.email)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
+}
 
   return (
     <section id="contact" className="contact-section">
@@ -22,22 +28,20 @@ export default function Contact() {
             <span className="section-tag">Let's Connect</span>
             <h2 className="contact-title">Open to Opportunities</h2>
             <p className="contact-text">
-              I'm actively looking for Senior Frontend Developer and Angular Lead roles —
-              remote, hybrid, or relocation. If you have a project or position that fits,
-              let's talk.
+              I’m open to Senior Frontend Developer Lead opportunities across remote, hybrid, or relocation roles. Happy to connect and discuss how I can contribute.
             </p>
 
             {/* Contact methods */}
             <div className="contact-methods">
-              <button className="contact-method" onClick={copyEmail}>
-                <div className="contact-icon">✉</div>
-                <div className="contact-method__info">
-                  <span className="contact-method__label">Email</span>
-                  <span className="contact-method__value">
-                    {copied ? '✓ Copied!' : personal.email}
-                  </span>
-                </div>
-              </button>
+              <button className="contact-method" onClick={handleEmailClick}>
+  <div className="contact-icon">✉</div>
+  <div className="contact-method__info">
+    <span className="contact-method__label">Email</span>
+    <span className="contact-method__value">
+      {personal.email}
+    </span>
+  </div>
+</button>
 
               <a href={`tel:${personal.phone}`} className="contact-method">
                 <div className="contact-icon">📞</div>

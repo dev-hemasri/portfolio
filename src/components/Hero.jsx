@@ -42,7 +42,7 @@ export default function Hero() {
             <button className="btn btn-secondary" onClick={() => scrollTo('#contact')}>
               Get in Touch
             </button>
-            <a href={personal.resumeUrl} className="btn btn-resume" target="_blank" rel="noreferrer">
+            <a href={personal.resumeUrl} className="btn btn-resume" target="_blank" rel="noreferrer" download>
               ↓ Resume
             </a>
           </div>
@@ -62,15 +62,16 @@ export default function Hero() {
               <CodeLine n={2}>&nbsp;&nbsp;<span className="code-string">"name"</span>: <span className="code-string">"Hemasri"</span>,</CodeLine>
               <CodeLine n={3}>&nbsp;&nbsp;<span className="code-string">"role"</span>: <span className="code-string">"Senior Frontend Dev"</span>,</CodeLine>
               <CodeLine n={4}>&nbsp;&nbsp;<span className="code-string">"stack"</span>: [</CodeLine>
-              <CodeLine n={5}>&nbsp;&nbsp;&nbsp;&nbsp;<span className="code-string">"Angular 14–17"</span>,</CodeLine>
-              <CodeLine n={6}>&nbsp;&nbsp;&nbsp;&nbsp;<span className="code-string">"TypeScript"</span>,</CodeLine>
-              <CodeLine n={7}>&nbsp;&nbsp;&nbsp;&nbsp;<span className="code-string">"RxJS / NgRx"</span>,</CodeLine>
-              <CodeLine n={8}>&nbsp;&nbsp;&nbsp;&nbsp;<span className="code-string">"React ⚛ (learning)"</span></CodeLine>
-              <CodeLine n={9}>&nbsp;&nbsp;],</CodeLine>
-              <CodeLine n={10}>&nbsp;&nbsp;<span className="code-string">"experience"</span>: <span className="code-string">"6+ years"</span>,</CodeLine>
-              <CodeLine n={11}>&nbsp;&nbsp;<span className="code-string">"available"</span>: <span className="code-keyword">true</span></CodeLine>
-              <CodeLine n={12}>{'}'}</CodeLine>
-              <CodeLine n={13}><span className="code-comment">// Let's build something great!</span></CodeLine>
+              <CodeLine n={5}>&nbsp;&nbsp;&nbsp;&nbsp;<span className="code-string">"Angular 2+"</span>,</CodeLine>
+              <CodeLine n={6}>&nbsp;&nbsp;&nbsp;&nbsp;<span className="code-string">"JavaScript"</span>,</CodeLine>
+              <CodeLine n={7}>&nbsp;&nbsp;&nbsp;&nbsp;<span className="code-string">"TypeScript"</span>,</CodeLine>
+              <CodeLine n={8}>&nbsp;&nbsp;&nbsp;&nbsp;<span className="code-string">"RxJS / NgRx"</span>,</CodeLine>
+              <CodeLine n={9}>&nbsp;&nbsp;&nbsp;&nbsp;<span className="code-string">"React"</span></CodeLine>
+              <CodeLine n={10}>&nbsp;&nbsp;],</CodeLine>
+              <CodeLine n={11}>&nbsp;&nbsp;<span className="code-string">"experience"</span>: <span className="code-string">"6+ years"</span>,</CodeLine>
+              <CodeLine n={12}>&nbsp;&nbsp;<span className="code-string">"available"</span>: <span className="code-keyword">true</span></CodeLine>
+              <CodeLine n={13}>{'}'}</CodeLine>
+              <CodeLine n={14}><span className="code-comment">// Let's build something great!</span></CodeLine>
             </div>
           </div>
         </div>
