@@ -3,9 +3,10 @@ import { personal } from '../data/portfolioData'
 import './Navbar.css'
 
 const navLinks = [
+  { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
+  { label: 'Experience', href: '#experiences' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -14,10 +15,32 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [theme, setTheme] = useState('light')
+  const [active, setActive] = useState('about') // ✅ FIX
 
   // Scroll shadow
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // ✅ Scroll Spy (Active section highlight)
+  useEffect(() => {
+    const sections = document.querySelectorAll('section')
+
+    const handleScroll = () => {
+      let current = ''
+
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id')
+        }
+      })
+
+      if (current) setActive(current)
+    }
+
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
@@ -46,26 +69,29 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
       <div className="nav-container">
-        
+
         <span className="brand">{personal.name}</span>
 
         {/* Desktop */}
         <ul className="nav-links">
           {navLinks.map(link => (
             <li key={link.label}>
-              <a href={link.href} onClick={e => handleNavClick(e, link.href)}>
-                {link.label}
+              <a
+                href={link.href}
+                onClick={e => handleNavClick(e, link.href)}
+                className={active === link.href.replace('#', '') ? 'active' : ''}
+              >
+                {link.label} {/* ✅ FIX (missing text) */}
               </a>
             </li>
           ))}
 
           <li>
-            <a href={personal.resumeUrl} className="nav-resume-btn" target="_blank">
+            <a href={personal.resumeUrl} className="nav-resume-btn" target="_blank" rel="noreferrer">
               Resume ↗
             </a>
           </li>
 
-          {/* 🌙 Theme Toggle */}
           <li>
             <button className="theme-toggle" onClick={toggleTheme}>
               {theme === 'light' ? '🌙' : '☀️'}
@@ -86,7 +112,12 @@ export default function Navbar() {
       {menuOpen && (
         <div className="mobile-menu">
           {navLinks.map(link => (
-            <a key={link.label} href={link.href} onClick={e => handleNavClick(e, link.href)}>
+            <a
+              key={link.label}
+              href={link.href}
+              onClick={e => handleNavClick(e, link.href)}
+              className={active === link.href.replace('#', '') ? 'active' : ''}
+            >
               {link.label}
             </a>
           ))}

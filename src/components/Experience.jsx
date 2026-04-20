@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 
 export default function Experience() {
   return (
-    <section className="experience-section">
+    <section id="experiences" className="experience-section">
       <div className="section-wrapper">
 
         <div className="section-header">

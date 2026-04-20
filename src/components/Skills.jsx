@@ -19,7 +19,7 @@ export default function Skills() {
       : skills.find(s => s.category === active)?.items || []
 
   return (
-    <section className="skills-section">
+    <section id="skills"className="skills-section">
       <div className="section-wrapper">
 
         <div className="section-header center">
