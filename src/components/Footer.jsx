@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-center">
-            <p>Built with <span className="heart">♥</span> using React + Vite</p>
+            <p>Built with using React + Vite</p>
             <p>© {year} Hemasri. All rights reserved.</p>
           </div>
         </div>
